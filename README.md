@@ -7,8 +7,7 @@ Tiny and dirty [ubersicht](http://tracesof.net/uebersicht/) widget that displays
 
 1. Show air quality in your city (AQI)
 2. Quick health guidelines
-3. Colorful Status 
-
+3. Colorful status bar -- bottom 
 
 ### How
 1. Download the index file
