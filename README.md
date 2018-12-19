@@ -1,7 +1,7 @@
 # Airflo-ubersicht
 Tiny and dirty [ubersicht](http://tracesof.net/uebersicht/) widget that displays the air quality index (AQI) in your city.
 
-![screenshot](https://github.com/kelvinwebdesigner/Airflo-ubersicht/raw/master/screenshot.png)
+![screen](https://github.com/kelvinwebdesigner/Airflo-ubersicht/raw/master/screen.png)
 
 ### Features
 
