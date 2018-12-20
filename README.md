@@ -9,7 +9,7 @@ Tiny and dirty [ubersicht](http://tracesof.net/uebersicht/) widget that displays
 1. Show air quality in your city (AQI)
 2. Quick health guidelines
 3. Pollution background image status
-4. Cigarrete equivalence
+4. Research based cigarette equivalence - check http://berkeleyearth.org/air-pollution-and-cigarette-equivalence/
 
 ### How
 
