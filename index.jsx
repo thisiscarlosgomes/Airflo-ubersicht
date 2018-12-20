@@ -52,7 +52,7 @@ export const render = state => {
   const cityaqi = Math.round((AqiToPm25(state.aqi) * 10) / 10);
   const cig = cityaqi / 22;
   const cigr = Math.round(cig * 10) / 10;
-  var firstWord = state.cityname.replace(/(([^\s]+\s\s*){2})(.*)/, "$1…"); // limit the cityname to only 2 words
+  var firstWord = state.cityname.replace(/(([^\s]+\s\s*){2})(.*)/, "$1…"); // limit the cityname to only 2 worads
   function check() {
     if (state.aqi <= 50) {
       // excellent
@@ -61,7 +61,7 @@ export const render = state => {
           <div className={header}>Airflo</div>
           <div className={main}>
             <p className={height}> {`📍 ${firstWord}`}</p>
-            <p className={height}> {`💚  ${state.aqi} AQI - Excellent Day`}</p>
+            <p className={height}> {`💚  ${state.aqi} AQI - Excellent`}</p>
             <p className={height}>🏃 Suitable for outdoor activities</p>
             <p className={height}>😍 Enjoy this wonderfull day</p>
           </div>
@@ -99,7 +99,7 @@ export const render = state => {
             <p className={height}>🚬 Equivalent to smoking {cigr} cigs/day</p>
           </div>
           <span className={Small}>Updated {`${state.daterr}`}</span>
-          <div className={image_y} />
+          <div className={image_r} />
         </div>
       );
     } else if (state.aqi <= 200) {
@@ -184,6 +184,7 @@ export const updateState = (event, previousState) => {
         City data not available. Replace with another city
       </p>
     );
+    console.log("love");
     return previousState;
   } else {
     const aqi = event.data.data.aqi,
@@ -191,7 +192,6 @@ export const updateState = (event, previousState) => {
       daterr = event.data.data.time.s;
 
     return {
-      status,
       aqi,
       cityname,
       daterr
@@ -201,10 +201,10 @@ export const updateState = (event, previousState) => {
 
 export const wrapper = css`
   position: fixed;
-  backdrop-filter: blur(6px) sepia(0.2);
+  backdrop-filter: blur(4px) sepia(0.2);
   top: 24px;
   left: 24px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   background-size: 300px;
   border-radius: 8px;
   color: white;
@@ -222,7 +222,7 @@ export const header = css`
   background: rgba(0, 0, 0, 0.2);
   padding: 0px 16px;
   line-height: 24px;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   vertical-align: center;
@@ -237,24 +237,11 @@ export const image_g = css`
   position: absolute;
   width: 100%;
   height: 100%;
-  right: -40%;
-  background: url("http://pngimg.com/uploads/smoke/smoke_PNG55233.png")
-    no-repeat;
+  right: -70%;
+  background: url("http://pngimg.com/uploads/cloud/cloud_PNG5.png") no-repeat;
   background-size: 300px;
   opacity: 0.88;
-  bottom: -20%;
-`;
-
-export const image_r = css`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: -45%;
-  background: url("http://pngimg.com/uploads/smoke/smoke_PNG55173.png")
-    no-repeat;
-  background-size: 300px;
-  opacity: 0.88;
-  bottom: -40%;
+  bottom: -45%;
 `;
 
 export const image_y = css`
@@ -267,6 +254,17 @@ export const image_y = css`
   background-size: 300px;
   opacity: 0.88;
   bottom: -65%;
+`;
+export const image_r = css`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -40%;
+  background: url("http://pngimg.com/uploads/smoke/smoke_PNG55233.png")
+    no-repeat;
+  background-size: 300px;
+  opacity: 0.88;
+  bottom: -30%;
 `;
 
 export const loading = css`
@@ -286,6 +284,6 @@ export const height = css`
 export const Small = css`
   font-size: 12px;
   opacity: 0.5;
-  padding: 8px 16px 16px 16px;
+  padding: 0px 16px 16px;
   display: block;
 `;
