@@ -1,8 +1,8 @@
 # Airflo-ubersicht
 
-Tiny and dirty [ubersicht](http://tracesof.net/uebersicht/) widget that displays the air quality index (AQI) in your city.
+Tiny [ubersicht](http://tracesof.net/uebersicht/) widget that displays the air quality index (AQI) in your city.
 
-![screen](https://github.com/kelvinwebdesigner/Airflo-ubersicht/raw/master/screen.png)
+![screen](https://github.com/kelvinwebdesigner/Airflo-ubersicht/raw/master/screenshot.png)
 
 ### Features
 
@@ -14,7 +14,7 @@ Tiny and dirty [ubersicht](http://tracesof.net/uebersicht/) widget that displays
 ### How
 
 1. Download the index file
-2. Change CITY and API_TOKEN - get one here https://aqicn.org/api/ (Free).
+2. Edit index file and add CITY and API_TOKEN - get one here https://aqicn.org/api/ (Free).
 
 #### Telegram for a more "fancy" version
 
